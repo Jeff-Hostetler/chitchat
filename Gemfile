@@ -31,6 +31,7 @@ group :development, :test do
   gem 'pry'
   gem 'rspec-rails', '~> 3.5'
   gem 'rails-controller-testing'
+  gem 'jasmine-rails'
 end
 
 group :development do
