@@ -3,8 +3,8 @@ require 'rails_helper'
 describe 'Chats API' do
   describe 'GET /chats' do
     it 'returns a successful response with ordered messages' do
-      second_message = Message.create(text: 'You like baileys?', created_at: Time.now)
-      first_message = Message.create(text: 'I got all the things ya need', created_at: 1.minute.ago)
+      second_message = TestObjectFactory.create_message({created_at: Time.now})
+      first_message = TestObjectFactory.create_message({created_at: 1.minute.ago})
 
       get '/'
 

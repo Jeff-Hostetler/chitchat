@@ -4,6 +4,6 @@ class RoomChannel < ApplicationCable::Channel
   end
 
   def speak(data)
-    ActionCable.server.broadcast 'room_channel', text: data['text']
+    Message.create!(text: data[:text])
   end
 end
