@@ -19,9 +19,7 @@ describe('room', function () {
 
   describe('#received', function () {
     it('calls to alert user with text', function () {
-      //TODO when not alerting and pushing messages, don't spy.
-      //Running specs with the alert causes the alert to fire which is annoying so spying for now.
-      received = jasmine.createSpy('received');
+      //TODO don't this this so dumb. Test the jquery
       expect(room.received).toEqual(jasmine.any(Function))
     });
   });
