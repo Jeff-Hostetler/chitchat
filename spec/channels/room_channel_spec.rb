@@ -10,11 +10,19 @@ describe 'RoomChannel' do
   end
 
   describe '#speak' do
+    before do
+      @room_channel = RoomChannel.new(TestObjectFactory.new_connection, 'fake', {})
+    end
     it 'creates a Message given data' do
-      room_channel = RoomChannel.new(TestObjectFactory.new_connection, 'fake', {})
-      room_channel.speak({'text' => 'hello there'})
+      @room_channel.speak({'text' => 'hello there'})
 
       expect(Message.all.map(&:text)).to eq(['hello there'])
+    end
+
+    it 'will not create message unless text is present' do
+      @room_channel.speak({'text' => ''})
+
+      expect(Message.count).to eq(0)
     end
   end
 end

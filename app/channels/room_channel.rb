@@ -4,6 +4,6 @@ class RoomChannel < ApplicationCable::Channel
   end
 
   def speak(data)
-    Message.create!(text: data['text'])
+    Message.create!(text: data['text']) if data['text'].present?
   end
 end

@@ -1,4 +1,3 @@
-// include spec/javascripts/helpers/some_helper_file.js and app/assets/javascripts/foo.js
 //= require channels/room
 describe('room', function () {
   var room;
