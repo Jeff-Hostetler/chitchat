@@ -1,11 +1,14 @@
-<h1>Chat room</h1>
-<div id="messages">
-  <%= render @messages %>
+<div class="center-container">
+  <h1>Chat room</h1>
+  <div id="messages" class="message-board">
+    <%= render @messages %>
+  </div>
+
+
+  <form class="input-form">
+    <label>Say something:</label>
+    <span>
+      <input type="text" data-behavior="room_speaker">
+    </span>
+  </form>
 </div>
-
-
-<form>
-  <label>Say something:</label>
-  <br>
-  <input type="text" data-behavior="room_speaker">
-</form>
