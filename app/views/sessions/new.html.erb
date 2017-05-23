@@ -1,7 +1,7 @@
 <div class="center-container">
   <h1>Sign In</h1>
 
-  <%= form_for(:session, url: signin_path) do |f| %>
+  <%= form_for(:session, url: sign_in_path) do |f| %>
     <% if @login_error %>
       <div>
         <li><%= @login_error %></li>

@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticate_user
-    redirect_to(:signin) unless current_user.present?
+    redirect_to(:sign_in) unless current_user.present?
   end
 
   def go_to_main_chat

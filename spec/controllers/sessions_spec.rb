@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe SessionsController do
-  describe 'GET /signin' do
+  describe 'GET /sign_in' do
     it 'returns a successful response' do
       get :new
 
@@ -19,7 +19,7 @@ describe SessionsController do
     end
   end
 
-  describe 'POST /signin' do
+  describe 'POST /sign_in' do
     before do
       @user = TestObjectFactory.create_user(
           username: 'test',

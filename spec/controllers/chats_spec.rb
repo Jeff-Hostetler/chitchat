@@ -20,7 +20,7 @@ describe ChatsController do
         get :main
 
         expect(response.status).to eq 302
-        expect(response).to redirect_to('/signin')
+        expect(response).to redirect_to('/sign_in')
       end
     end
   end

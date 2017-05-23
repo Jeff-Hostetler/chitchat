@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'pages#index'
 
-  get 'signin' => 'sessions#new'
-  post 'signin' => 'sessions#create'
+  get 'sign_in' => 'sessions#new'
+  post 'sign_in' => 'sessions#create'
 
   resources :users, only: [:new, :create]
   get '/chats/main', to: 'chats#main'
