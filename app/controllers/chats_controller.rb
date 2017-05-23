@@ -1,5 +1,5 @@
 class ChatsController < ApplicationController
-  def index
+  def main
     @messages = Message.for_chatroom
   end
 end

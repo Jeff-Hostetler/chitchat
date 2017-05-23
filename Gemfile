@@ -27,6 +27,8 @@ gem 'redis', '~> 3.0'
 #for asset pipeline
 gem 'coffee-rails'
 
+gem 'bcrypt', '3.1.11'
+
 group :development, :test do
   gem 'pry'
   gem 'rspec-rails', '~> 3.5'

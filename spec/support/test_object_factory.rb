@@ -13,6 +13,20 @@ class TestObjectFactory
     def create_message(opts = {})
       new_message(opts).tap(&:save!)
     end
+
+    def new_user(opts = {})
+      random_number = rand(10000).to_s
+      defaults = {
+          username: 'person' + random_number,
+          password: 'fakepassword',
+          password_confirmation: 'fakepassword'
+      }
+      User.new(defaults.merge(opts))
+    end
+
+    def create_user(opts = {})
+      new_user(opts).tap(&:save!)
+    end
   end
 
   class FakeConnection
